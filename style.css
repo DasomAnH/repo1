@@ -1,0 +1,128 @@
+@keyframes rolling {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  75% {
+    transform: translateY(-60%);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+
+body,
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  margin-left: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 100%;
+  font-weight: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: bisque;
+  color: black;
+}
+
+.portrait {
+  background-image: url('a.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: 56.25%;
+}
+.profile {
+  padding: 7%;
+}
+.profile-header,
+.profile-section {
+  padding-bottom: 14%;
+}
+
+.profile-section h2 {
+  border-top: 3px solid;
+  color: rgb(235, 129, 147);
+  margin-bottom: 20px;
+  padding: 1.5em 0;
+  margin-left: 2em;
+  font-weight: 2em;
+  position: relative;
+}
+
+.name {
+  font-size: 30px;
+  line-height: 1;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 40px;
+  border: 1px;
+}
+
+.name-job {
+  display: inline-block;
+  background-color: bisque;
+  vertical-align: top;
+  height: 1.5em;
+  overflow: hidden;
+  padding-right: 1em;
+}
+.name-job-list {
+  animation-name: rolling;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+.name-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8em;
+  line-height: 0.7;
+  color: rgb(235, 129, 147);
+  margin-left: -0.3em;
+  position: relative;
+}
+
+.navbar_icons {
+  list-style: none;
+  color: rgb(235, 129, 147);
+  display: flex;
+}
+.navbar_icons li {
+  padding: 8px 12px;
+}
+@media (min-width 768px) {
+  .portrait {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60vw;
+    height: 100vh;
+    padding: 0;
+  }
+  .profile {
+    margin-left: 40vw;
+  }
+}
